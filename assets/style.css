@@ -1,0 +1,169 @@
+/* CSS Reset */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Nunito", sans-serif;
+    background: url('/assets/Images/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 400px;
+    min-height: 800px;
+    height: 100%;
+}
+
+.container {
+    width: 50%;
+    max-width: 1280px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 28px;
+    backdrop-filter: blur(50px);
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    /* height: 800px; */
+}
+
+.profile-picture img {
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.profile-picture img:hover{
+    transform: scale(1.2);
+}
+
+.card h1 {
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+.bio p {
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+
+.links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 50px;
+    width: 90%;
+}
+
+.links i{
+    margin-right: 6px;
+    padding: 12px;
+}
+
+.links a {
+    font-size: 1.4rem;
+    color: grey;
+    margin: 0px 10px;
+    transition: .2s ease-in-out;
+    text-decoration: none;
+    box-shadow: 0px 0px 2px 0px #5f5f5f;
+    margin: 20px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.links a:hover {
+    color: palegreen;
+    transform: translateY(-10px);
+   
+}
+
+.box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    transition: .2s ease-in-out;
+}
+
+.box:hover{
+    transform: translateY(-10px);
+}
+
+.box img{
+    width: 30px;
+    margin-right: 12px;
+    transition: .2s ease-in-out;
+}
+
+.box img:hover{
+    transform: translateY(-10px);
+}
+
+
+
+
+.footer p{
+    margin: 40px;
+    color: grey;
+}
+
+.footer a{
+    color: grey;
+    transition: 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    color: palegreen;
+}
+
+/* Scroll Bar CSS */
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: darkslategrey;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: darkslategrey;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .container {
+        width: 100%;
+    }
+}
