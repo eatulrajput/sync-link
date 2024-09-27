@@ -36,7 +36,7 @@ Check out the live version here: [Social Media Reference Landing Page](#)
     Open the index.html file in your web browser.
 3. Open the index.html file in your web browser.
 
-Contributing
+## Contributing
 
 Contributions are welcome! To contribute:
 
