@@ -13,14 +13,10 @@ body {
     align-items: center;
     flex-direction: column;
     font-family: "Nunito", sans-serif;
-    background: url('/assets/Images/background.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     margin: 0;
     padding: 100px;
-    overflow: hidden; /* Prevent body scrolling */
+    overflow: hidden;
 
     /* Gradient background with wave animation */
     background: linear-gradient(120deg, rgba(2, 0, 36, 1), rgba(9, 9, 121, 1) 50%, rgba(0, 212, 255, 1));
@@ -33,57 +29,61 @@ body {
     0% {
         background-position: 0% 50%;
     }
+
     25% {
         background-position: 50% 60%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     75% {
         background-position: 50% 40%;
     }
+
     100% {
         background-position: 0% 50%;
     }
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 50%;
     max-width: 1280px;
-    max-height: calc(100vh - 200px); /* Height constraint for the container */
-    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
     border-radius: 30px;
-    background: rgba(0, 0, 0, 0.4); /* Semi-transparent white background */
-    padding: 30px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Optional for style */
+    background: rgba(0, 0, 0, 0.4);
+    padding-top: 80vh ;
+    padding-bottom: 10vh;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Hide Scrollbar for Webkit Browsers (Chrome, Edge, Safari) */
 .container::-webkit-scrollbar {
-    width: 0; /* Invisible scrollbar width */
-    height: 0; /* Invisible scrollbar height */
+    width: 0;
+    height: 0;
 }
 
-/* For Firefox */
 .container {
-    scrollbar-width: none; /* Firefox-specific property */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Edge/IE */
 }
 
-/* For Edge/Internet Explorer */
-.container {
-    -ms-overflow-style: none; /* Hides scrollbar for older Microsoft browsers */
-}
-
-.card {
+header.card {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    border-radius: 28px;
+    align-items: center;
+    text-align: center;
     color: white;
     padding: 20px;
     margin: 20px;
-    /* height: 800px; */
 }
 
 .profile-picture img {
@@ -95,11 +95,11 @@ body {
     transition: 0.5s ease-in-out;
 }
 
-.profile-picture img:hover{
+.profile-picture img:hover {
     transform: scale(1.2);
 }
 
-.card h1 {
+header.card h1 {
     font-size: 3rem;
     font-weight: 100;
 }
@@ -109,108 +109,130 @@ body {
     font-size: 1.2rem;
 }
 
-.links {
+nav.links {
     display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
     flex-direction: column;
-    text-align: left;
-    flex-wrap: wrap;
-    align-content: center;
+    align-items: center;
     margin-top: 50px;
     width: 90%;
 }
 
-.links i{
-    margin-right: 6px;
-    padding: 12px;
+.links .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 10px 0;
+    transition: 0.3s ease-in-out;
 }
 
-.links a {
+.links .box:hover {
+    transform: translateY(-10px);
+}
+
+.links .box a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.4rem;
     color: grey;
-    margin: 0px 10px;
-    transition: .2s ease-in-out;
     text-decoration: none;
-    box-shadow: 0px 0px 2px 0px #5f5f5f;
-    margin: 20px;
-    width: 100%;
-    text-align: center;
     padding: 20px;
-    border-radius: 8px;
-}
-
-.links a:hover {
-    color: palegreen;
-    transform: translateY(-10px);
-   
-}
-
-.box{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     width: 100%;
-    transition: .2s ease-in-out;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 0px #5f5f5f;
+    transition: color 0.3s ease-in-out;
 }
 
-.box:hover{
-    transform: translateY(-10px);
-}
-
-.box img{
-    width: 30px;
-    margin-right: 12px;
-    transition: .2s ease-in-out;
-}
-
-.box img:hover{
-    transform: translateY(-10px);
-}
-
-
-
-
-.footer p{
-    margin: 40px;
+.links .box i {
+    font-size: 1.4rem;
     color: grey;
+    margin-right: 8px;
 }
 
-.footer a{
+.links .box:hover a,
+.links .box:hover a i {
+    color: palegreen;
+}
+
+.links .box img {
+    height: 24px;
+    width: 24px;
+    margin-right: 8px;
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+    filter: grayscale(100%);
+}
+
+.links .box:hover img {
+    filter: none;
+    transform: scale(1.2);
+    /* Optional scaling for hover effect */
+}
+
+
+.custom-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    filter: grayscale();
+}
+
+.gdp-icon1 {
+    background-image: url('/assets/Images/gdp.svg');
+}
+
+.gcp-icon2 {
+    background-image: url('/assets/Images/gcp.svg');
+}
+
+.custom-icon:hover {
+    filter: none;
+}
+
+footer.footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer.footer p {
     color: grey;
-    transition: 0.2s ease-in-out;
+    font-size: 0.9rem;
+}
+
+footer.footer a {
+    color: grey;
+    transition: color 0.3s ease-in-out;
     text-decoration: none;
 }
 
-.footer a:hover{
+footer.footer a:hover {
     color: palegreen;
 }
 
 /* Scroll Bar CSS */
-/* width */
 ::-webkit-scrollbar {
     width: 7px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
     background: transparent;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background: darkslategrey;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background-color: darkslategrey;
 }
 
-
+/* Media Queries */
 @media screen and (max-width: 1000px) {
-    
-    body{
+    body {
         padding: 20px;
     }
 
