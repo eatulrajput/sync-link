@@ -60,7 +60,6 @@ body {
     align-items: center;
     width: 50%;
     max-width: 1280px;
-    max-height: calc(100vh - 200px);
     overflow-y: auto;
     border-radius: 30px;
     background: rgba(0, 0, 0, 0.4);
@@ -93,7 +92,7 @@ header.card {
 }
 
 .profile-picture{
-    margin-top: 30vh;
+    margin-top: 100vh;
 }
 
 .profile-picture img {
