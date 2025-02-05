@@ -63,8 +63,6 @@ body {
     overflow-y: auto;
     border-radius: 30px;
     background: rgba(0, 0, 0, 0.4);
-    padding-top: 80vh ;
-    padding-bottom: 10vh;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -92,7 +90,8 @@ header.card {
 }
 
 .profile-picture{
-    margin-top: 20vh;
+    margin-top: 120vh;
+    margin-bottom: 10vh;
 }
 
 .profile-picture img {
@@ -216,6 +215,7 @@ footer.footer {
 footer.footer p {
     color: grey;
     font-size: 1.2rem;
+    padding: 0px 20px;
 }
 
 footer.footer a {
@@ -252,22 +252,21 @@ footer.footer a:hover {
 /* Media Queries */
 @media screen and (max-width: 800px) {
     body {
-        padding: 20px;
+        padding: 0;
+        margin: 0;
     }
 
     .container {
         width: 100%;
-        padding: 20px;
+        border-radius: 0px;
     }
 
     .profile-picture img {
         height: 250px;
         width: 250px;
-        margin-top: 60vh;
         border-radius: 50%;
         cursor: pointer;
         transition: 0.5s ease-in-out;
-        padding: 20px;
         box-shadow: 0 4px 20px #72cbfb;
         border: solid 5px transparent;
     }
