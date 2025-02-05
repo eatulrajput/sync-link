@@ -92,13 +92,13 @@ header.card {
 }
 
 .profile-picture{
-    margin-top: 100vh;
+    margin-top: 20vh;
 }
 
 .profile-picture img {
     height: 300px;
     width: 300px;
-    margin: 20px;
+    /* margin: 20px; */
     border-radius: 50%;
     cursor: pointer;
     transition: 0.5s ease-in-out;
@@ -258,14 +258,12 @@ footer.footer a:hover {
     .container {
         width: 100%;
         padding: 20px;
-        margin-top: 50px;
     }
 
     .profile-picture img {
         height: 250px;
         width: 250px;
-        margin: 20px;
-        margin-top: 350px;
+        margin-top: 60vh;
         border-radius: 50%;
         cursor: pointer;
         transition: 0.5s ease-in-out;
